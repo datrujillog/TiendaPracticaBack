@@ -33,7 +33,7 @@ function listar(req,res){
                 console.log(elem);
     
                 var imagen_path = elem.path;
-                var name = imagen_path.split('\\');
+                var name = imagen_path.split('/');
                 var imagen_name = name[2];
                 
                 var galeria = new Galeria();

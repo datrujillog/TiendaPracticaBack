@@ -2,6 +2,7 @@
 var express = require('express');
 var bodyparser = require('body-parser');
 var mongoose = require('mongoose');
+require('dotenv').config();
 var port = process.env.PORT || 4201;
 var app = express();
 var fs = require('fs');
