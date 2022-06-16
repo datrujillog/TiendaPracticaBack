@@ -6,7 +6,6 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
-    
   },
   "author": "",
   "license": "ISC",
@@ -33,5 +32,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yego0210/TiendaPracticaBack.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/yego0210/TiendaPracticaBack/issues"
+  },
+  "homepage": "https://github.com/yego0210/TiendaPracticaBack#readme"
 }
