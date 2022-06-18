@@ -65,7 +65,7 @@ function registro(req,res){
         });
     }else{
         var imagen_path = req.files.banner.path;
-        var name = imagen_path.split('\\');
+        var name = imagen_path.split('/');
         var imagen_name = name[2];
     
         var marca = new Marca;
@@ -123,7 +123,7 @@ function actualizar(req,res){
         });
 
         var imagen_path = req.files.banner.path;
-        var name = imagen_path.split('\\');
+        var name = imagen_path.split('/');
         var imagen_name = name[2];
     
         Marca.findByIdAndUpdate({_id:id},{nombre:data.nombre, descripcion:data.descripcion,banner:imagen_name},(err,marca_update)=>{

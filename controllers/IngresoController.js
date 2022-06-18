@@ -47,7 +47,7 @@ function registro(req,res){
     else{
         console.log(data);
         var factura_path = req.files.factura.path;
-        var name = factura_path.split('\\');
+        var name = factura_path.split('/');
         var factura_name = name[2];
 
         var ingreso = new Ingreso();

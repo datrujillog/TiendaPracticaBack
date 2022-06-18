@@ -825,7 +825,7 @@ function registro(req,res){
     if(img_banner != ""){
         
         var imagen_path = req.files.poster.path;
-        var name = imagen_path.split('\\');
+        var name = imagen_path.split('/');
         var imagen_name = name[2];
     
         var producto = new Producto;
@@ -926,7 +926,7 @@ function actualizar(req,res){
         });
         
         var imagen_path = req.files.poster.path;
-        var name = imagen_path.split('\\');
+        var name = imagen_path.split('/');
         var imagen_name = name[2];
 
     

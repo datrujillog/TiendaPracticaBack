@@ -50,7 +50,7 @@ function actualizar(req,res){
         });
 
         var logo_path = req.files.logo.path;
-        var name = logo_path.split('\\');
+        var name = logo_path.split('/');
         var logo_logo = name[2];
     
         Congeneral.findByIdAndUpdate({_id:id},{titulo:data.titulo, cr:data.cr, cr:data.cr, telefono_uno:data.telefono_uno, telefono_dos:data.telefono_dos, email_uno:data.email_uno, email_dos:data.email_dos, direccion:data.direccion, horarios:data.horarios, iframe_mapa:data.iframe_mapa,logo:logo_logo,facebook:data.facebook,instagram:data.instagram,youtube:data.youtube,twitter:data.twitter},(err,marca_update)=>{
@@ -79,7 +79,7 @@ function actualizar(req,res){
         });
 
         var favicon_path = req.files.favicon.path;
-        var name = favicon_path.split('\\');
+        var name = favicon_path.split('/');
         var favicon_favicon = name[2];
     
         Congeneral.findByIdAndUpdate({_id:id},{titulo:data.titulo, cr:data.cr, cr:data.cr, telefono_uno:data.telefono_uno, telefono_dos:data.telefono_dos, email_uno:data.email_uno, email_dos:data.email_dos, direccion:data.direccion, horarios:data.horarios, iframe_mapa:data.iframe_mapa,favicon:favicon_favicon,facebook:data.facebook,instagram:data.instagram,youtube:data.youtube,twitter:data.twitter},(err,marca_update)=>{
@@ -114,11 +114,11 @@ function actualizar(req,res){
         });
 
         var favicon_path = req.files.favicon.path;
-        var name = favicon_path.split('\\');
+        var name = favicon_path.split('/');
         var favicon_favicon = name[2];
 
         var logo_path = req.files.logo.path;
-        var name = logo_path.split('\\');
+        var name = logo_path.split('/');
         var logo_logo = name[2];
     
         Congeneral.findByIdAndUpdate({_id:id},{titulo:data.titulo, cr:data.cr, cr:data.cr, telefono_uno:data.telefono_uno, telefono_dos:data.telefono_dos, email_uno:data.email_uno, email_dos:data.email_dos, direccion:data.direccion, horarios:data.horarios, iframe_mapa:data.iframe_mapa,favicon:favicon_favicon,logo:logo_logo,facebook:data.facebook,instagram:data.instagram,youtube:data.youtube,twitter:data.twitter},(err,marca_update)=>{
@@ -200,7 +200,7 @@ function promocion(req,res){
         });
 
         var banner_path = req.files.banner.path;
-        var name = banner_path.split('\\');
+        var name = banner_path.split('/');
         var banner_banner = name[2];
 
         Promocion.findByIdAndUpdate({_id:id},{etiqueta:data.etiqueta, first_title:data.first_title, producto_title:data.producto_title, subtitulo:data.subtitulo, end:data.end, enlace:data.enlace,estado:data.estado, banner: banner_banner},(err,data)=>{
@@ -252,7 +252,7 @@ function slider(req,res){
         });
 
         var banner_path = req.files.imagen.path;
-        var name = banner_path.split('\\');
+        var name = banner_path.split('/');
         var banner_banner = name[2];
 
         Slider.findByIdAndUpdate({_id:id},{titulo_uno:data.titulo_uno,titulo_dos:data.titulo_dos,subtitulo:data.subtitulo,estado:data.estado, imagen: banner_banner},(err,data)=>{

@@ -251,7 +251,7 @@ function actualizar(req, res) {
     }
 
     var imagen_path = req.files.perfil.path;
-    var name = imagen_path.split("\\");
+    var name = imagen_path.split("/");
     var imagen_name = name[2];
 
     console.log(imagen_name);
