@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "npm-run-all build:*",     
+    "build": "npm-run-all build:*",
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
@@ -28,7 +28,6 @@
     "node-fetch": "^2.6.0",
     "nodemailer": "^6.4.11",
     "nodemailer-smtp-transport": "^2.7.4",
-    "npm-windows-upgrade": "^6.0.1",
     "path": "^0.12.7",
     "rimraf": "^3.0.2",
     "socket.io": "^2.3.0"
