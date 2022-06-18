@@ -52,7 +52,23 @@ var congeneral_routes = require('./routes/congeneral');
 var contacto_routes = require('./routes/contacto');
 var ingreso_routes = require('./routes/ingreso');
 const congeneral = require('./models/congeneral');
-mongoose.connect('mongodb://localhost:27017/ecommerce', {
+// mongoose.connect('mongodb://localhost:27017/ecommerce', {
+//     useUnifiedTopology: true,
+//     useNewUrlParser: true
+// }, (err, res) => {
+//     if (err) {
+//         throw err;
+//     } else {
+//         server.listen(port, function() {
+//             console.log("Servidor " + port);    
+//         });
+//     }
+// });
+
+
+
+let path =  process.env.MONGODB_URL ||  process.env.MONSGODB_CNNN
+mongoose.connect(path, {
     useUnifiedTopology: true,
     useNewUrlParser: true
 }, (err, res) => {
@@ -60,10 +76,13 @@ mongoose.connect('mongodb://localhost:27017/ecommerce', {
         throw err;
     } else {
         server.listen(port, function() {
-            console.log("Servidor " + port);    
+            console.log("Servidor " + port);
         });
     }
 });
+
+
+
 app.use(bodyparser.urlencoded({
     extended: true
 }));
